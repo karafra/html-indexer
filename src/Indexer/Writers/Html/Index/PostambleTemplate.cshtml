@@ -1,0 +1,16 @@
+@namespace Core.Writers.Html.Index
+
+@inherits MiniRazor.TemplateBase<PostambleContext>
+
+@{
+  var version = Model.Version;
+}
+
+<footer>
+  <p class="VERSION">
+    Indexer @version © 2022 by Karafra<br>
+    HTML output hacked and copyleft © 2022 by Karafra
+  </p>
+</footer>
+
+</html>
