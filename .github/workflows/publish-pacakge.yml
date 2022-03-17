@@ -15,7 +15,7 @@ jobs:
         uses: rohith/publish-nuget@v2
         with:
           # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: HtmlIndexer.csproj
+          PROJECT_FILE_PATH: HtmlIndexer.sln
           PACKAGE_NAME: KariIndexer
           VERSION_REGEX: ^\s*<Version>(.*)<\/Version>\s*$
           TAG_FORMAT: v*
