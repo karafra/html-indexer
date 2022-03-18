@@ -1,7 +1,7 @@
-using Core;
-using Core.Writers;
+using HtmlIndexer.Utilities.File;
+using HtmlIndexer.Writers;
 
-namespace Core;
+namespace HtmlIndexer;
 
 public partial class FolderIndexer : IAsyncDisposable
 {
@@ -33,7 +33,6 @@ public partial class FolderIndexer : IAsyncDisposable
     }
     var dirTree = _context.IndexDirTree;
     string filePath = _context.OutputFilePath;
-    string dirPath = _context.IndexDirPath;
     Stream stream = File.Create(filePath);
     var writer = new HtmlFileGroupWriter(stream, dirTree);
     await writer.WritePreambleAsync(cancellationToken);
@@ -51,6 +50,6 @@ public partial class FolderIndexer
   public static HtmlFileGroupWriter CreateWriter(IndexContext context)
   {
     var stream = File.Create(context.OutputFilePath);
-    return new HtmlFileGroupWriter(stream, context.IndexDirTree);
+    return new HtmlFileGroupWriter(stream,  context.IndexDirTree);
   }
 }

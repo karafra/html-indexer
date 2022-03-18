@@ -1,6 +1,6 @@
 using System.Collections;
-using Core.Data.Contracts;
-namespace Core.Data.Structures;
+using HtmlIndexer.Data.Contracts;
+namespace HtmlIndexer.Data.Structures;
 public partial class TreeNode<T> : IEnumerable<TreeNode<T>> where T : ITReeStorable
 {
   public int ChildCount => _children.Count;

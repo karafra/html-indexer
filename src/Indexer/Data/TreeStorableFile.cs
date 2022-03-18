@@ -1,6 +1,6 @@
-using Core.Data.Contracts;
+using HtmlIndexer.Data.Contracts;
 
-namespace Core.Data;
+namespace HtmlIndexer.Data;
 
 public class TreeStorableFile : TreeStorable<string>
 {

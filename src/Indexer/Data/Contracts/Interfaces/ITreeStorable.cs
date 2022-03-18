@@ -1,4 +1,4 @@
-namespace Core.Data.Contracts;
+namespace HtmlIndexer.Data.Contracts;
 public interface ITReeStorable
 {
   string Id { get; }

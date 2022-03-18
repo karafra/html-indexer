@@ -1,4 +1,4 @@
-namespace Core.Writers.Html.Index;
+namespace HtmlIndexer.Writers.Html.Index;
 
 internal class PostambleContext
 {

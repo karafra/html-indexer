@@ -1,5 +1,5 @@
 
-namespace Core.Data.Contracts;
+namespace HtmlIndexer.Data.Contracts;
 public abstract class TreeStorable<T> : ITReeStorable
 {
   public string Id { get; }

@@ -1,7 +1,7 @@
-using Core.Data;
-using Core.Data.Structures;
+using HtmlIndexer.Data;
+using HtmlIndexer.Data.Structures;
 
-namespace Core.Writers.Html.Index;
+namespace HtmlIndexer.Writers.Html.Index;
 
 internal class FileGroupContext
 {

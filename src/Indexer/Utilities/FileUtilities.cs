@@ -1,7 +1,7 @@
-using Core.Data;
-using Core.Data.Structures;
+using HtmlIndexer.Data;
+using HtmlIndexer.Data.Structures;
 
-namespace Core.Utilities.File;
+namespace HtmlIndexer.Utilities.File;
 
 internal static partial class Utilities
 {

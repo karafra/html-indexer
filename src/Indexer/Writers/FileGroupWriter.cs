@@ -1,7 +1,7 @@
-using Core.Data;
-using Core.Data.Structures;
+using HtmlIndexer.Data;
+using HtmlIndexer.Data.Structures;
 
-namespace Core.Writers;
+namespace HtmlIndexer.Writers;
 
 public abstract class IndexWriter : IAsyncDisposable
 {
@@ -19,14 +19,21 @@ public abstract class IndexWriter : IAsyncDisposable
     Context = context;
   }
 
-  public virtual ValueTask WritePreambleAsync(CancellationToken cancellationToken = default) => default;
+  internal virtual ValueTask WritePreambleAsync(CancellationToken cancellationToken = default) => default;
 
-  public virtual ValueTask WriteFileTreeAsync(CancellationToken cancellationToken = default) => default;
+  internal virtual ValueTask WriteFileTreeAsync(CancellationToken cancellationToken = default) => default;
 
-  public virtual ValueTask WritePostambleAsync(CancellationToken cancellationToken = default) => default;
+  internal virtual ValueTask WritePostambleAsync(CancellationToken cancellationToken = default) => default;
 
   public virtual async ValueTask DisposeAsync() 
   {
     await Stream.DisposeAsync(); 
+  }
+
+  public virtual async ValueTask GenerateIndex(CancellationToken cancellationToken = default)
+  {
+    await WritePostambleAsync();
+    await WriteFileTreeAsync();
+    await WritePostambleAsync();
   }
 }

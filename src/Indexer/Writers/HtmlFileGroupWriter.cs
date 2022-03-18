@@ -1,8 +1,8 @@
-using Core.Data;
-using Core.Data.Structures;
-using Core.Writers.Html.Index;
+using HtmlIndexer.Data;
+using HtmlIndexer.Data.Structures;
+using HtmlIndexer.Writers.Html.Index;
+namespace HtmlIndexer.Writers;
 
-namespace Core.Writers;
 
 public class HtmlFileGroupWriter : IndexWriter
 {
@@ -14,7 +14,7 @@ public class HtmlFileGroupWriter : IndexWriter
     _writer = new StreamWriter(stream);
   }
 
-  public override async ValueTask WritePreambleAsync(CancellationToken cancellationToken = default)
+  internal override async ValueTask WritePreambleAsync(CancellationToken cancellationToken = default)
   {
     var templateContext = new PostambleContext("1.0");
     await _writer.WriteLineAsync(
@@ -22,7 +22,7 @@ public class HtmlFileGroupWriter : IndexWriter
     );
   }
 
-  public override async ValueTask WritePostambleAsync(CancellationToken cancellationToken = default)
+  internal override async ValueTask WritePostambleAsync(CancellationToken cancellationToken = default)
   {
     var templateContext = new PreambleContext("1.0");
     await _writer.WriteLineAsync(
@@ -30,7 +30,7 @@ public class HtmlFileGroupWriter : IndexWriter
     );
   }
 
-  public override async ValueTask WriteFileTreeAsync(CancellationToken cancellationToken = default)
+  internal override async ValueTask WriteFileTreeAsync(CancellationToken cancellationToken = default)
   {
     var templateContext = new FileGroupContext(base.Context);
     await _writer.WriteLineAsync(
