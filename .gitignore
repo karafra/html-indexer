@@ -131,3 +131,5 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+out
+out/KariIndexer.Net.1.0.7.nupkg out/KariIndexer.1.0.0.nupkg out/KariIndexer.1.0.6.nupkg
