@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>$copyright$</copyright>
+    <tags>Html indexer Folder Library</tags>
+    <readme>README.md</readme>
+    <dependencies>
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+      <PackageReference Include="xunit" Version="2.4.1" />
+      <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+      <PackageReference Include="MiniRazor" Version="2.2.0" />
+      <PackageReference Include="MiniRazor.CodeGen" Version="2.2.0" />
+    </dependencies>
+    
+  </metadata>
+</package>
