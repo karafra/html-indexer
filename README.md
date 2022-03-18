@@ -104,10 +104,11 @@ Simple folder indexer with html output file, very simple and highly customizable
 
 ### Installation
 
-1. Clone the repo
+1. Install package
    ```sh
    $ dotnet add <Project> package KariIndexer.Net 
    ```
+2. Enjoy 😊
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -116,13 +117,16 @@ Simple folder indexer with html output file, very simple and highly customizable
 <!-- USAGE EXAMPLES -->
 ## Usage
 ```cs
-var context = new IndexContext("index", root, "../index.html");
-    await using(var writer = FolderIndexer.CreateWriter(context))
-    {
-      await writer.WritePostambleAsync();
-      await writer.WriteFileTreeAsync();
-      await writer.WritePreambleAsync();
-    }
+using HtmlIndexer;
+
+public class Program
+{
+  public static async Task Main(string[] args)
+  {
+    var index = new IndexContext("../../img/", "index.html");
+    await FolderIndexer.CreateWriter(index).GenerateIndex();
+  }
+}
 ```
 
 _For more examples, please refer to the [Documentation](https://github.com/karafra/html-indexer)_
