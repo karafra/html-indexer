@@ -9,8 +9,8 @@
     <PackageId>KariIndexer</PackageId>
     <Authors>Karafra</Authors>
     <Company>Karafra</Company>
-    <Version>1.0.6</Version>
     <PacakgeReadmeFile>\..\..\README.md </PacakgeReadmeFile>
+    <NuspecFile>./.nuspec</NuspecFile>
   </PropertyGroup>
 
   <ItemGroup>
