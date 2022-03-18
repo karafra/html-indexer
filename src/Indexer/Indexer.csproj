@@ -6,11 +6,15 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>KariIndexer</PackageId>
+    <PackageId>KariIndexer.Net</PackageId>
+    <Version>1.1.1</Version>
     <Authors>Karafra</Authors>
     <Company>Karafra</Company>
-    <PacakgeReadmeFile>\..\..\README.md </PacakgeReadmeFile>
-    <NuspecFile>./.nuspec</NuspecFile>
+    <Title>Folder indexer</Title>
+    <Tags>Html indexer Folder Library</Tags>
+    <Description>Simple folder indexer with html ouput</Description>
+    <Owners>Karafra</Owners>
+    <PackageReadme>README.md</PackageReadme>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,7 +22,6 @@
     <PackageReference Include="MiniRazor" Version="2.2.0" />
     <PackageReference Include="MiniRazor.CodeGen" Version="2.2.0" />
   </ItemGroup>
-
   <ItemGroup>
     <AdditionalFiles Include="Writers\Html\**\*.cshtml" IsRazorTemplate="true" />
   </ItemGroup>
